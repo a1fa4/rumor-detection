@@ -115,8 +115,8 @@ def train(model, n_epoch=100):
     if use_cuda:
         model.cuda()
     criterion = nn.BCELoss()
-    # optimizer = optim.RMSprop(model.parameters())
-    optimizer = optim.SGD(model.parameters(), lr=0.05)
+    optimizer = optim.RMSprop(model.parameters())
+    #optimizer = optim.SGD(model.parameters(), lr=0.05)
 
     print(f'training {model.__class__.__name__} ...')
     acc_max = 0.0
